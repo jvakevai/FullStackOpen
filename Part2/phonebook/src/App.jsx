@@ -15,7 +15,6 @@ import personService from './services/persons'
         {person.name} {person.number} 
          <button onClick = {() => delPersonButton(person.id)}>Delete</button>
       </div>
-
       ))}
     </div>
   )
@@ -38,7 +37,6 @@ const Filter = ({filter, handleFilter}) => {
     </div>
   )
 }
-
  const Notification = ({notificationType, message}) =>{
     const successfulNotification = {
       color: 'green',
