@@ -113,15 +113,28 @@ const App = () => {
             setNumber('')
           })
           .catch(error => {
-            setNotificationType('unsuccessful')
-            setNotification(`${personToUpdate.name} was already deleted from the server`
-            )
-            setTimeout(() => {
+            //Check if person was already deleted
+            if(personToUpdate === undefined){
+              setNotificationType('unsuccessful')
+              setNotification(`${personToUpdate.name} was already deleted from the server`
+              )
+              setTimeout(() => {
               setNotification(null)
-            }, 5000)
-            setPersons(persons.filter(person => person.id !== personToUpdate.id))
-            setNewName('')
-            setNumber('')
+              }, 5000)
+              setPersons(persons.filter(person => person.id !== personToUpdate.id))
+              setNewName('')
+              setNumber('')
+            //If not, catch error if new number is invalid
+            }else{
+              setNotificationType('unsuccessful')
+              setNotification(`${error.response.data.error}`)
+    
+              setTimeout(() => {
+              setNotification(null)
+              }, 5000)
+              setNewName('')
+              setNumber('')   
+            }
           })
       }
       else{
@@ -145,6 +158,17 @@ const App = () => {
         }, 5000)
         setNewName('')
         setNumber('')
+      })
+      //Catch error if the name length is too short
+      .catch(error => {
+        setNotificationType('unsuccessful')
+        setNotification(`${error.response.data.error}`)
+    
+        setTimeout(() => {
+          setNotification(null)
+        }, 5000)
+          setNewName('')
+          setNumber('')
       })
     }
   }
