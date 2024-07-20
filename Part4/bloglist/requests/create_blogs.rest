@@ -1,9 +1,10 @@
 POST http://localhost:3003/api/blogs/
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1hcmsgRG9lIiwiaWQiOiI2Njk3Y2MwOGRjNGVkYWYyYWFmMDIxZmYiLCJpYXQiOjE3MjEyMjQ3NzEsImV4cCI6MTcyMTIyODM3MX0.cpTMZ7TDPvyCrRryBmOm9OGCLymuZgHfLUk4Ejag7Dc
 
 {
-    "title": "terve",
-    "author": "tarppi",
-    "url": "tarppi.com",
-    "likes": "1123"
+    "title": "Blog123",
+    "author": "Author123",
+    "url": "MyBlog.com123",
+    "likes": "1"
 }
