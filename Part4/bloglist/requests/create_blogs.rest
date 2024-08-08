@@ -1,7 +1,6 @@
 POST http://localhost:3003/api/blogs/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1hcmsgRG9lIiwiaWQiOiI2Njk3Y2MwOGRjNGVkYWYyYWFmMDIxZmYiLCJpYXQiOjE3MjEyMjQ3NzEsImV4cCI6MTcyMTIyODM3MX0.cpTMZ7TDPvyCrRryBmOm9OGCLymuZgHfLUk4Ejag7Dc
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1hcmsgRG9lIiwiaWQiOiI2NmIyMTlhN2ExZjMyNTU2Y2U1NGJkZDEiLCJpYXQiOjE3MjI5NDgyNTUsImV4cCI6MTcyMjk1MTg1NX0.x_rLvEC4tfBZ2RDJ79Wqd5sssejWuLHLIeq_d9dB8DU
 {
     "title": "Blog123",
     "author": "Author123",
