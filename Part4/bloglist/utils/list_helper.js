@@ -2,7 +2,6 @@ const dummy = (blogs) => {
     return 1
 }
 const totalLikes = (blogs) => {
-
     const reducer = (sum, item) => {
         return sum + item.likes
     }
@@ -11,7 +10,6 @@ const totalLikes = (blogs) => {
 }
 
 const favoriteBlog = (blogs) => {
-    
     const reducer = (max, curr) => {
         if(curr.likes > max.likes){
             return curr
